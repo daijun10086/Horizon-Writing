@@ -40,7 +40,7 @@ This tells the reader nothing that the figure does not, and "some variation" lea
 
 **After**
 
-> Figure 7 shows the speedup of our prefetcher over a system with no prefetching (y-axis) for each of the 12 SPEC CPU2017 benchmarks (x-axis). The rightmost bar is the geometric mean. The prefetcher speeds up every benchmark, by 1.31x on average, but the gains split into two groups: the five benchmarks on the left gain more than 1.5x, while the other seven gain less than 1.1x. *(Describe.)*
+> Figure 7 shows the speedup of our prefetcher over a system with no prefetching (y-axis) for each of the 12 SPEC CPU2017 benchmarks (x-axis). The rightmost bar is the geometric mean. The prefetcher speeds up every benchmark, by 1.31x on average. The gains fall into two groups: the five benchmarks on the left gain more than 1.5x, while the other seven gain less than 1.1x. *(Describe.)*
 >
 > The split follows how each benchmark accesses memory. The five benchmarks that gain the most walk through large arrays in a regular order, so the prefetcher can predict their next accesses. The other seven mostly follow pointers, and their next address is not known until the current load finishes. *(Explain why.)*
 >

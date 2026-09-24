@@ -1,0 +1,121 @@
+# Discouraged words for clear-writing
+#
+# These words are not banned. They are strongly discouraged because AI writing
+# overuses them, usually as jargon, metaphor, or self-praise. Use one only when
+# it is the most precise word in its plain, literal meaning.
+#
+# How to edit this file (anyone in the lab can add words):
+#   - "# group: <name>" starts a group. "# why:" and "# instead:" explain the
+#     group; the checker prints them next to each match, so keep them short.
+#   - Each other non-empty line is one entry:
+#         form, form, form | except: phrase, phrase
+#     Separate the forms of one word with commas. The checker also catches
+#     regular endings (-s, -es, -ed, -ing, -ly), so list only irregular forms
+#     such as "paid" or "won".
+#   - "except:" lists phrases where the word is the normal technical term, so
+#     the checker skips it there (for example "race condition").
+#   - Lines starting with "#" are comments.
+
+# group: self-vouching
+# why: These words ask the reader to trust the writer instead of giving a reason to. Real candor shows in the content.
+# instead: Delete the word, or give the evidence that makes the claim believable.
+honest, honestly, honesty
+genuine, genuinely
+legitimate, legitimately
+
+# group: borrowed rigor
+# why: These words dress ordinary work up as an audit, a court case, or a formal experiment, so the reader expects more than was done.
+# instead: Say what you actually did: "I read the three callers of parse()", not "I audited parse()".
+audited, audit
+certify, certified, certifies
+uncertified
+forensic, forensically
+provenance
+hypothesis, hypotheses
+testable
+refute, refuted
+facts
+confirmation
+foundational
+guarantee, guaranteed, guarantees
+qualify, qualifies, qualified
+settle, settled, settles
+
+# group: money and games
+# why: Betting, buying, and winning metaphors hide the literal cost or benefit behind a figure of speech.
+# instead: State the literal cost or benefit with numbers: "this uses 2 GB more memory and halves the run time".
+bet, bets, betting
+budget, budgets | except: power budget, area budget, memory budget, grant budget
+pay, paid, pays, payoff, pays off | except: pay attention
+trade, trades, trade-off, trade-offs, tradeoff, tradeoffs
+economics
+rental
+wholesale
+win, wins, won, winning, winner
+collect a prize, collect the prize, collect the win, collect the reward, collect a reward
+race, races | except: race condition, race conditions, data race, data races, race detector, race-free
+stacking the deck, stack the deck
+
+# group: physical and engineering metaphors
+# why: These borrow a concrete image (a beam, a gate, a blade) for an abstract relationship, and the reader has to decode it.
+# instead: Name the actual relationship: "the rest of the proof depends on this lemma", not "this lemma is load-bearing".
+load-bearing, load bearing
+gate, gates, gated, gating | except: logic gate, logic gates, AND gate, OR gate, NAND gate, NOR gate, XOR gate, gate delay, gate count, gate-level, clock gating, gated clock, gate oxide
+screen, screens, screened, screening | except: screen reader, screen readers, on screen, on the screen, screen size, full screen, touch screen, splash screen, login screen, home screen, lock screen
+envelope, envelopes
+re-arming, re-arm, rearm, rearming
+onion-peeling, peeling the onion, peel the onion, peeling back the onion
+sharpen, sharpens, sharpened
+line in the sand, draw a line in the sand
+signal, signals, signaled, signalled | except: signal handler, signal handlers, signal handling, signal processing, clock signal, control signal, control signals, signal integrity, digital signal, analog signal
+
+# group: moral and dramatic words
+# why: These words add judgment or drama (purity, punishment, surprise) to technical content that should stay neutral.
+# instead: Describe what happened and what it caused, and let the reader judge.
+pure, purely | except: pure function, pure functions, purely functional
+purity
+impure
+punish, punishes, punished, punishing
+discipline, disciplined
+damage, damages, damaged, damaging
+hazard, hazards | except: data hazard, data hazards, control hazard, control hazards, structural hazard, structural hazards, RAW hazard, WAR hazard, WAW hazard
+surprise, surprising, surprisingly
+curiosity
+tolerable
+lost | except: lost packets, lost updates, lost wakeup, lost write, lost writes
+
+# group: product talk
+# why: Product and marketing words make research or engineering work sound like a launch.
+# instead: Say what exists now and where: "the fix is merged into main", "the tool is on GitHub".
+ship, ships, shipped, shipping
+
+# group: common AI filler
+# why: These words appear far more often in AI text than in human writing, usually where a plain word would do. This group was added by the skill author, not taken from the lab's original list; the lab can remove it.
+# instead: Use the plain word: "look at" for delve, "use" for leverage, "important" or nothing for crucial.
+delve, delves, delving
+leverage, leverages, leveraged, leveraging
+seamless, seamlessly
+tapestry
+showcase, showcases, showcasing
+underscore, underscores, underscored
+pivotal
+crucial, crucially
+notably
+it's worth noting, it is worth noting, worth noting that
+in today's fast-paced
+let's dive in, dive into, deep dive
+game-changer, game changer, game-changing
+unlock, unlocks, unlocked
+supercharge, supercharges
+nuanced
+holistic, holistically
+synergy, synergies
+
+# group: needless phrases (from Strunk)
+# why: The Elements of Style, Rule 13 and Chapter V: these phrases add words without adding meaning.
+# instead: "the fact that he failed" -> "his failure"; "as to whether" -> "whether"; "one of the most" -> say which and why.
+the fact that
+as to whether
+one of the most
+along these lines, along the lines of
+literally

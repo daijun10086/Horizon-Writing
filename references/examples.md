@@ -109,3 +109,15 @@ Each example shows a typical piece of AI writing, what is wrong with it, and a r
 **After**
 
 > This helps when most requests hit the cache: at a 90% hit rate it cut median latency by 30% in our tests. At hit rates below 50% we saw no change.
+
+## 9. Explaining a table in a results section
+
+**Before**
+
+> Table 3 summarizes the results. As shown, our approach achieves the best trade-off, highlighting its effectiveness.
+
+**What is wrong.** The text only points at the table. It does not say what the rows and columns are, which entry matters, why, or what follows from it. "Best trade-off" is a verdict without the numbers behind it. See `explaining-figures.md` for the three-level method (describe, explain why, say what it implies).
+
+**After**
+
+> Table 3 lists, for each of the four cache designs (rows), the average miss rate and the chip area it needs (columns), measured on the 12 SPEC CPU2017 benchmarks. Our design has the second-lowest miss rate, 4.1%, only 0.2 points above the largest design, while using 38% less area. It gets close to the largest design because most of the misses the larger cache avoids come from a few streaming benchmarks, and our design already skips caching their data. So when chip area is limited, adding capacity beyond our design would reduce misses very little for the area it costs.

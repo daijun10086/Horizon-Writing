@@ -1,8 +1,8 @@
 # Horizon Writing
 
-A writing skill for AI agents such as Claude Code and Codex. It teaches an agent to write prose that a reader can understand without having seen the conversation behind it: full sentences, defined terms, numbers with their setting, and plain words instead of AI jargon.
+A writing skill for AI agents such as Claude Code and Codex. It teaches an agent to write prose that a reader can understand without having seen the conversation behind it. That means full sentences, defined terms, numbers with their setting, figures that are explained instead of just pointed at, and plain words instead of AI jargon.
 
-The skill grew out of a complaint that is common in research groups. AI-written text often assumes the reader already has all the knowledge and context, so it arrives as a string of fragments and buzzwords ("root-caused it; the gate was load-bearing; shipped"). This skill puts context first, adds a lab-maintained list of discouraged words with the reason each is discouraged, and draws on two classic sources: Yale Patt's advice on technical writing and William Strunk Jr.'s *The Elements of Style* (1918).
+The skill grew out of a complaint that is common in research groups. AI-written text often assumes the reader already has all the knowledge and context, so it arrives as a string of fragments and buzzwords ("root-caused it; the gate was load-bearing; shipped"). This skill puts context first and adds a lab-maintained list of discouraged words with the reason each is discouraged. It draws on three sources: Yuhao Zhu's method for explaining a scientific figure, Yale Patt's advice on technical writing, and William Strunk Jr.'s *The Elements of Style* (1918).
 
 ## Install
 
@@ -39,7 +39,7 @@ To update, run `git -C ~/.claude/skills/horizon-writing pull` (or the Codex path
 
 ### Optional: always-on rules
 
-An agent loads a skill only when it decides the task needs one, so it may skip the skill for a quick commit message or chat reply. The file [`snippets/always-on.md`](snippets/always-on.md) holds a five-point version of the rules. Paste it into `~/.claude/CLAUDE.md` (Claude Code) or `~/.codex/AGENTS.md` (Codex), and the rules will apply to every reply.
+An agent loads a skill only when it decides the task needs one, so it may skip the skill for a quick commit message or chat reply. The file [`snippets/always-on.md`](snippets/always-on.md) holds a six-point version of the rules. Paste it into `~/.claude/CLAUDE.md` (Claude Code) or `~/.codex/AGENTS.md` (Codex), and the rules will apply to every reply.
 
 ## Use
 
@@ -60,6 +60,7 @@ It reads Markdown, plain text, and LaTeX, and flags discouraged words, abbreviat
 | `SKILL.md` | The rules and the workflow the agent follows. |
 | `references/word-list.txt` | Discouraged words, grouped by the habit they reveal, with exemptions for literal technical terms such as "race condition." |
 | `references/examples.md` | Before-and-after rewrites of typical AI prose. |
+| `references/explaining-figures.md` | Yuhao Zhu's three-level method for explaining a figure or table (describe, explain why, say what it implies), with a worked example. |
 | `references/patt-on-writing.md` | A summary of Yale Patt's advice, with a link to the original page. |
 | `references/strunk-for-technical-writing.md` | Which of Strunk's rules apply to technical writing today and which to skip. |
 | `references/elements-of-style-1918.md` | The full public-domain text of *The Elements of Style* (1918). |
@@ -76,6 +77,7 @@ The words are discouraged rather than banned. An agent may still use one when it
 ## Sources
 
 - The context rules and the original word list come from guidance our advisor gave the lab about AI writing.
+- Yuhao Zhu, "How to Explain a Scientific Figure": https://yuhaozhu.com/blog/explain-figure.html (summarized here, not copied).
 - Yale Patt, "On writing": https://users.ece.utexas.edu/~patt/writing/ (summarized here, not copied).
 - William Strunk Jr., *The Elements of Style* (1918), converted from https://daoyuan14.github.io/elos.pdf. The 1918 text is in the public domain in the United States.
 

@@ -1,6 +1,6 @@
 ---
 name: horizon-writing
-description: Write and revise prose that people will read so that it is plain, specific, and understandable without prior context. Use this skill whenever you write or edit text for a human reader, including paper sections, abstracts, reports, emails, README files, documentation, design notes, PR descriptions, commit messages, review comments, and chat answers that explain something. It covers giving the reader enough context, writing in full sentences, avoiding AI-style jargon and a lab-maintained list of discouraged words, and applying Yale Patt's advice on technical writing and Strunk's The Elements of Style. It includes a script that flags discouraged words, undefined abbreviations, and long sentences in a draft.
+description: Write and revise prose that people will read so that it is plain, specific, and understandable without prior context. Use this skill whenever you write or edit text for a human reader, including paper sections, abstracts, reports, emails, README files, documentation, design notes, PR descriptions, commit messages, review comments, and chat answers that explain something. It covers giving the reader enough context, writing in full sentences, explaining figures and tables in results sections, avoiding AI-style jargon and a lab-maintained list of discouraged words, and applying Yale Patt's advice on technical writing and Strunk's The Elements of Style. It includes a script that flags discouraged words, undefined abbreviations, and long sentences in a draft.
 ---
 
 # Horizon Writing
@@ -68,6 +68,16 @@ The lab keeps a list of discouraged words in `references/word-list.txt`. The wor
 - **Framing at the start and end.** Do not open by praising the question or restating the task, and do not close with a summary of what you just said or a list of offers. Start with the answer.
 - **Stacked hedges** such as "may potentially help to some extent." One qualifier, placed where the doubt is, is enough.
 
+## Rule 6: Explain every figure and table
+
+A figure in a paper or report needs an explanation in the text; the reader should not have to work out alone what it shows and why it matters. This rule comes from Yuhao Zhu's post "How to Explain a Scientific Figure" (see `references/explaining-figures.md`). Explain each figure in three levels, in this order:
+
+1. **Describe what it shows.** Say what the axes and units are, what each marker, line, or bar stands for, and what the baseline is. Then name the one observation or trend the reader should focus on. This gives the reader the context to read the figure.
+2. **Explain why.** Say what causes the observation. Skip this only when the reason is obvious to the intended readers.
+3. **Say what it implies.** When you can, say what the result teaches beyond the figure itself, for example what it means for design choices or future work. This level is optional, but include it whenever you have something useful to say.
+
+"Figure 7 shows the results" is not an explanation. Tables get the same treatment: say what the rows and columns are, point out the entry or pattern that matters, explain it, and say what it implies.
+
 ## How to use this skill
 
 1. **Plan.** Before drafting anything longer than a few sentences, write down for yourself who the reader is, what they already know, and the one thing they should take away. Put that thing first.
@@ -87,6 +97,7 @@ The lab keeps a list of discouraged words in `references/word-list.txt`. The wor
 - Would a capable reader who never saw this conversation understand every paragraph?
 - Is every term, abbreviation, and internal name defined or explained at first use?
 - Does every number come with what was measured and what it was compared with?
+- Does the text explain every figure and table: what it shows, why the data looks that way, and what it implies?
 - Are the explanations written as full sentences and paragraphs, with the connecting words that show the reasoning?
 - Does the main point come first?
 - Did the checker's findings get rewritten rather than replaced with synonyms?
@@ -102,7 +113,8 @@ The lab keeps a list of discouraged words in `references/word-list.txt`. The wor
 ## Reference files
 
 - `references/word-list.txt`: the discouraged words, grouped, with the reason for each group and the literal technical uses that are exempt. The lab adds to it over time.
-- `references/examples.md`: before-and-after rewrites of typical AI prose (status updates, commit messages, paper paragraphs, review comments, emails). Read it when you are unsure what a rule looks like in practice.
+- `references/examples.md`: before-and-after rewrites of typical AI prose (status updates, commit messages, paper paragraphs, review comments, emails, and explaining a table). Read it when you are unsure what a rule looks like in practice.
+- `references/explaining-figures.md`: a summary of Yuhao Zhu's three-level method for explaining a figure, with a worked example and a checklist. Read it whenever you write or revise text that discusses a figure or table.
 - `references/patt-on-writing.md`: a summary of Yale Patt's advice on technical writing, with a link to the original.
 - `references/strunk-for-technical-writing.md`: which of Strunk's rules apply to technical writing, with examples, and which to skip.
 - `references/elements-of-style-1918.md`: the full public-domain text of Strunk's *The Elements of Style* (1918). Read a specific rule when you need its full explanation; do not load the whole book for ordinary tasks.

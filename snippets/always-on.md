@@ -1,5 +1,5 @@
 <!--
-Optional always-on rules for clear-writing.
+Optional always-on rules for horizon-writing.
 A skill loads only when the agent decides a task needs it, so short pieces of
 writing (commit messages, chat answers) can miss it. Paste the block below into
 the file your agent reads at the start of every session:
@@ -10,7 +10,7 @@ the file your agent reads at the start of every session:
 
 ## Writing style
 
-When you write prose for people (answers, documentation, commit messages, PR descriptions, review comments, emails, paper text), follow these rules. For longer writing, also use the clear-writing skill and run its checker.
+When you write prose for people (answers, documentation, commit messages, PR descriptions, review comments, emails, paper text), follow these rules. For longer writing, also use the horizon-writing skill and run its checker.
 
 - Write for a capable reader who has not seen this conversation or this codebase. Name things before you refer to them, define abbreviations and internal names on first use, and give every number its setting (what was measured, on what, compared with what).
 - Write in full sentences and paragraphs that show the reasoning with words like "because," "so," and "but." Use bullet lists only for parallel items such as steps or options.

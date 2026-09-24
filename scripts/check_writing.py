@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Flag patterns in a draft that the clear-writing skill discourages.
+"""Flag patterns in a draft that the horizon-writing skill discourages.
 
 Usage:
     python3 check_writing.py draft.md [more files ...]

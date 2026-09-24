@@ -1,9 +1,9 @@
 ---
-name: clear-writing
+name: horizon-writing
 description: Write and revise prose that people will read so that it is plain, specific, and understandable without prior context. Use this skill whenever you write or edit text for a human reader, including paper sections, abstracts, reports, emails, README files, documentation, design notes, PR descriptions, commit messages, review comments, and chat answers that explain something. It covers giving the reader enough context, writing in full sentences, avoiding AI-style jargon and a lab-maintained list of discouraged words, and applying Yale Patt's advice on technical writing and Strunk's The Elements of Style. It includes a script that flags discouraged words, undefined abbreviations, and long sentences in a draft.
 ---
 
-# Clear writing
+# Horizon Writing
 
 This skill helps you write text that a reader can understand on the first read, even if they were not part of the conversation or the work behind it. It comes from a research lab's guidance on AI writing.
 

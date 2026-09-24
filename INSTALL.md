@@ -1,8 +1,8 @@
-# Installing clear-writing (instructions for AI agents)
+# Installing Horizon Writing (instructions for AI agents)
 
 This file is written for an AI coding agent (Claude Code, Codex, or similar) that a user has asked to install this skill. If you are a person, the README has the same steps in shorter form.
 
-The repository is https://github.com/daijun10086/clear-writing. The skill is the repository itself: `SKILL.md` sits at the top level, next to `references/`, `scripts/`, and `snippets/`.
+The repository is https://github.com/daijun10086/Horizon-Writing. The skill is the repository itself: `SKILL.md` sits at the top level, next to `references/`, `scripts/`, and `snippets/`.
 
 ## Step 1: Ask the user before changing anything
 
@@ -13,17 +13,17 @@ Installing a skill writes files into the user's configuration, so ask first. Tel
 
 ## Step 2: Pick the install folder
 
-The folder must be named `clear-writing`, matching the `name` field in `SKILL.md`.
+The folder must be named `horizon-writing`, matching the `name` field in `SKILL.md`.
 
 | Agent | All projects | Current project only |
 |---|---|---|
-| Claude Code | `~/.claude/skills/clear-writing` | `.claude/skills/clear-writing` |
-| Codex | `~/.agents/skills/clear-writing` | `.agents/skills/clear-writing` |
+| Claude Code | `~/.claude/skills/horizon-writing` | `.claude/skills/horizon-writing` |
+| Codex | `~/.agents/skills/horizon-writing` | `.agents/skills/horizon-writing` |
 | Other agents that support `SKILL.md` skills | the agent's documented personal skills folder | the agent's documented project skills folder |
 
 On Windows, `~` means `%USERPROFILE%`. Some older versions of Codex read personal skills from `~/.codex/skills` instead; if the skill does not appear after a restart, tell the user and offer to move it there.
 
-If your agent has no skill support at all, clone the repository to any stable place, such as `~/.local/share/clear-writing`. Then, in Step 5, add the always-on rules together with one more line: tell the agent to read `<that path>/SKILL.md` before longer writing tasks.
+If your agent has no skill support at all, clone the repository to any stable place, such as `~/.local/share/horizon-writing`. Then, in Step 5, add the always-on rules together with one more line: tell the agent to read `<that path>/SKILL.md` before longer writing tasks.
 
 ## Step 3: Download the skill
 
@@ -32,14 +32,14 @@ If the target folder already exists, do not overwrite it. Ask the user whether t
 Otherwise, clone the repository into the target folder:
 
 ```bash
-git clone --depth 1 https://github.com/daijun10086/clear-writing.git <target-folder>
+git clone --depth 1 https://github.com/daijun10086/Horizon-Writing.git <target-folder>
 ```
 
-If `git` is not available, download https://github.com/daijun10086/clear-writing/archive/refs/heads/main.zip, unzip it, and rename the extracted folder (`clear-writing-main`) to `clear-writing` at the target location.
+If `git` is not available, download https://github.com/daijun10086/Horizon-Writing/archive/refs/heads/main.zip, unzip it, and rename the extracted folder (`Horizon-Writing-main`) to `horizon-writing` at the target location.
 
 ## Step 4: Check the install
 
-1. Confirm that `<target-folder>/SKILL.md` exists and starts with a front matter block containing `name: clear-writing`.
+1. Confirm that `<target-folder>/SKILL.md` exists and starts with a front matter block containing `name: horizon-writing`.
 2. Run the checker on the examples file, which contains deliberately bad "before" text:
 
    ```bash
@@ -65,6 +65,6 @@ Before appending, check whether the file already has a `## Writing style` sectio
 Tell the user where you installed the skill and what you changed. Then explain:
 
 - The agent may need a new session, or a restart, to see a newly installed skill.
-- The skill loads on its own for writing tasks. The user can also ask for it by name: in Claude Code, type `/clear-writing` or say "use the clear-writing skill"; in Codex, mention `$clear-writing`.
+- The skill loads on its own for writing tasks. The user can also ask for it by name: in Claude Code, type `/horizon-writing` or say "use the horizon-writing skill"; in Codex, mention `$horizon-writing`.
 - To get updates later, run `git -C <target-folder> pull`.
 - The lab adds words to `references/word-list.txt` over time; updates bring those in.

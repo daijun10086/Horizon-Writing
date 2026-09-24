@@ -1,4 +1,4 @@
-# Discouraged words for clear-writing
+# Discouraged words for horizon-writing
 #
 # These words are not banned. They are strongly discouraged because AI writing
 # overuses them, usually as jargon, metaphor, or self-praise. Use one only when

@@ -1,4 +1,4 @@
-# clear-writing
+# Horizon Writing
 
 A writing skill for AI agents such as Claude Code and Codex. It teaches an agent to write prose that a reader can understand without having seen the conversation behind it: full sentences, defined terms, numbers with their setting, and plain words instead of AI jargon.
 
@@ -11,7 +11,7 @@ The skill grew out of a complaint that is common in research groups. AI-written 
 Paste this into Claude Code, Codex, or another coding agent:
 
 ```text
-Install the clear-writing skill from https://github.com/daijun10086/clear-writing.
+Install the horizon-writing skill from https://github.com/daijun10086/Horizon-Writing.
 Read INSTALL.md in that repository and follow it, and ask me before you change any files.
 ```
 
@@ -19,23 +19,23 @@ The agent will ask whether you want the skill in all projects or one project, an
 
 ### By hand
 
-Clone the repository into your agent's skills folder. The folder must be named `clear-writing`.
+Clone the repository into your agent's skills folder. The folder must be named `horizon-writing`.
 
 For Claude Code, available in all projects:
 
 ```bash
-git clone --depth 1 https://github.com/daijun10086/clear-writing.git ~/.claude/skills/clear-writing
+git clone --depth 1 https://github.com/daijun10086/Horizon-Writing.git ~/.claude/skills/horizon-writing
 ```
 
 For Codex, available in all projects:
 
 ```bash
-git clone --depth 1 https://github.com/daijun10086/clear-writing.git ~/.agents/skills/clear-writing
+git clone --depth 1 https://github.com/daijun10086/Horizon-Writing.git ~/.agents/skills/horizon-writing
 ```
 
-For a single project, clone into `.claude/skills/clear-writing` (Claude Code) or `.agents/skills/clear-writing` (Codex) inside that project instead. Other agents that support `SKILL.md` skills work the same way with their own skills folder. Start a new agent session afterwards.
+For a single project, clone into `.claude/skills/horizon-writing` (Claude Code) or `.agents/skills/horizon-writing` (Codex) inside that project instead. Other agents that support `SKILL.md` skills work the same way with their own skills folder. Start a new agent session afterwards.
 
-To update, run `git -C ~/.claude/skills/clear-writing pull` (or the Codex path).
+To update, run `git -C ~/.claude/skills/horizon-writing pull` (or the Codex path).
 
 ### Optional: always-on rules
 
@@ -43,12 +43,12 @@ An agent loads a skill only when it decides the task needs one, so it may skip t
 
 ## Use
 
-Once installed, the agent uses the skill on its own when it writes documents, emails, paper sections, READMEs, commit messages, and similar text. You can also ask for it directly: type `/clear-writing` in Claude Code, mention `$clear-writing` in Codex, or say "use the clear-writing skill to revise this."
+Once installed, the agent uses the skill on its own when it writes documents, emails, paper sections, READMEs, commit messages, and similar text. You can also ask for it directly: type `/horizon-writing` in Claude Code, mention `$horizon-writing` in Codex, or say "use the horizon-writing skill to revise this."
 
 The checker script also works on its own, without an agent. It needs only Python 3:
 
 ```bash
-python3 ~/.claude/skills/clear-writing/scripts/check_writing.py draft.md
+python3 ~/.claude/skills/horizon-writing/scripts/check_writing.py draft.md
 ```
 
 It reads Markdown, plain text, and LaTeX, and flags discouraged words, abbreviations used before they are defined, sentences longer than 35 words, em dashes, and "it's not X, it's Y" framing. It skips code, URLs, and citations. Run it with `--help` for options, such as `--allow ISA,ROB` for abbreviations your readers already know.
